@@ -1,18 +1,26 @@
 label {
-  flex: 1 1;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.875rem;
   text-align: center;
+  text-wrap: nowrap;
 }
 
 input {
   margin-right: 10px;
+  appearance: none;
 }
 
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  vertical-align: sub;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #4da7ff;
 }
 
 .task {
