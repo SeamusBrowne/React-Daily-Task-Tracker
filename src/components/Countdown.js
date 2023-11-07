@@ -18,12 +18,6 @@ class Countdown extends Component {
 
     return (
       <div className="Countdown">
-        {/* <span className="Countdown-col"> */}
-          {/* <span className="Countdown-col-element"> */}
-            {/* <strong>{this.addLeadingZeros(countDown.days)}</strong> */}
-            {/* <span>{countDown.days === 1 ? "Day" : "Days"}</span> */}
-          {/* </span> */}
-        {/* </span> */}
 
         <span className="Countdown-col">
           <span className="Countdown-col-element">
