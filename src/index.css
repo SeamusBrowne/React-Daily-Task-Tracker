@@ -37,3 +37,53 @@ input[type="checkbox"]:checked {
   line-height: 1.875rem;
   text-align: center;
 }
+
+.task_delete {
+  width: 30px;
+  height: 20px;
+  color: red;
+  background-color: #ffffff;
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+  opacity: 0;
+  transition: 600ms;
+  border: 0;
+}
+
+.task:hover .task_delete {
+  opacity: 1;
+}
+
+.add_task {
+  width: 60%;
+  margin: auto;
+}
+
+.add_task_text {
+  padding: 6px 12px;
+  border-radius: 3px;
+  background-color: rgb(250, 250, 250);
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.add_task_text:hover {
+  background-color: #feffb0;
+}
+
+.add_task_edit {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.add_task_edit input {
+  border: 2px solid #cbcbcb;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px;
+}
