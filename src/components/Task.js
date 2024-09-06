@@ -1,22 +1,16 @@
-import React, { useState } from "react";
+import React from 'react';
+import Checkbox from './Checkbox';
 
-function Task(props) {
-
-    const { id, title} = props.task;
-
-    return  (
-        <>
-                <label>
-                    <input type="checkbox" onChange={() => setIsChecked(!isChecked)}
-                    />
-                    {title}
-                </label>
-                <button className="task_delete" onClick={() => props.removeTask(props.columnId, id)}>X</button>
-                </div>
-            </div>
-        </>
-    )
-
+function Task({ task, onToggle }) {
+  return (
+    <div className="task">
+      <Checkbox isChecked={task.completed} onChange={onToggle} />
+      <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+        {task.title}
+      </span>
+      <button className="task_delete" onClick={() => props.removeTask(props.columnId, id)}>X</button>
+    </div>
+  );
 }
 
 export default Task;
