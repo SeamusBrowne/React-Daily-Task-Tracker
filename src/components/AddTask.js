@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 
-function AddTask(props) {
-  const [isAddible, setisAddible] = useState(false);
-  const [inputText, setInputText] = useState(props.defaultValue || "");
+function AddTask({ onAddTask }) {
+  const [task, setTask] = useState('');
 
   const submission = (e) => {
     e.preventDefault();
-    if(inputText && props.onSubmit) {
-      setInputText("");
-      props.onSubmit(inputText);
+    if(task.trim()) {
+      onAddTask(task);
+      setTask('');
     }
-    setisAddible(false);
-  }
+  };
 
   return (
     <div className="add_task">
